@@ -7,13 +7,19 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-''' Intilizing Rectangle class
-width : The width of the Rectangle, must be intger
-height : the height of the Rectangle, must be intger
-'''
+
+        ''' 
+        Intilizing Rectangle
+
+        Arguments:
+
+        width : The width of the Rectangle, must be intger
+        height : the height of the Rectangle, must be intger
+        '''
 
     @property
     def width(self):
+        ''' Get\Set Rectangle width '''
         return self.__width
 
     @width.setter
@@ -27,6 +33,7 @@ height : the height of the Rectangle, must be intger
 
     @property
     def height(self):
+        ''' Get\Set Rectangle height '''
         return self.__height
 
     @height.setter
