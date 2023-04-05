@@ -1,25 +1,30 @@
 #!/usr/bin/python3
 
-''' Prescrib Rectangle class '''
+"""Define a Rectangle class."""
 
-class Rectangle: 
+class Rectangle:
+    """
+    Rectangle class with width and height properties.
+
+    Attributes:
+        width (int): The width of the rectangle.
+        height (int): The height of the rectangle.
+    """
 
     def __init__(self, width=0, height=0):
+        """
+        Initialize a Rectangle object with the given width and height.
+
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+        """
         self.width = width
         self.height = height
 
-        ''' 
-        Intilizing Rectangle
-
-        Arguments:
-
-        width : The width of the Rectangle, must be intger
-        height : the height of the Rectangle, must be intger
-        '''
-
     @property
     def width(self):
-        ''' Get\Set Rectangle width '''
+        """Get or set the width of the rectangle."""
         return self.__width
 
     @width.setter
@@ -33,7 +38,7 @@ class Rectangle:
 
     @property
     def height(self):
-        ''' Get\Set Rectangle height '''
+        """Get or set the height of the rectangle."""
         return self.__height
 
     @height.setter
