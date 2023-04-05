@@ -2,6 +2,7 @@
 
 """Define a Rectangle class."""
 
+
 class Rectangle:
     """
     Rectangle class with width and height properties.
@@ -70,5 +71,3 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.width + self.height)
-
-

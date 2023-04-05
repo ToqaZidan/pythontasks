@@ -2,6 +2,7 @@
 
 """Define a Rectangle class."""
 
+
 class Rectangle:
     """
     Rectangle class with width and height properties.
@@ -49,4 +50,3 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-
