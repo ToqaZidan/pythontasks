@@ -14,5 +14,4 @@ def is_same_class(obj, a_class):
         False - otherwise
         """
 
-
-return obj.__class__ is a_class
+    return obj.__class__ is a_class
