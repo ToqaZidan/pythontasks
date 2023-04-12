@@ -8,4 +8,3 @@ available attributes and methods of an object
 def lookup(obj):
     """Return list of attributes"""
     return (dir(obj))
-

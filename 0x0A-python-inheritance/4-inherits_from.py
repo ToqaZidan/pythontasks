@@ -14,13 +14,7 @@ def inherits_from(obj, a_class):
         otherwise False.
     """
 
-        base_classes = obj.__class__.__bases__
-
-    if a_class in base_classes:
+    if issubclass(type(obj), a_class) and type(obj) != a_class:
         return True
-
-    for base_class in base_classes:
-        if inherits_from(base_class, a_class):
-            return True
 
     return False
