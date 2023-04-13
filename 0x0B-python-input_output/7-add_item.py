@@ -11,16 +11,6 @@ from save_to_json_file import save_to_json_file
 from load_from_json_file import load_from_json_file
 
 
-def add_item(argv: List[str]) -> None:
-    """
-    Adds all arguments to a list and saves it to a JSON file.
-
-    Args:
-    argv: arguments to a list
-
-    Return:
-    JSON file contain a list
-    """
     try:
         items = load_from_json_file('add_item.json')
     except FileNotFoundError:
