@@ -3,11 +3,10 @@
 """
 
 
-
 def write_file(filename="", text=""):
     """
-    Function that append without truncate textfile if it was found, creat it if it
-    was not found.
+    Function that append without truncate textfile
+    if it was found, creat it if it was not found.
 
     Args:
     filename: file to be written over.
@@ -17,4 +16,4 @@ def write_file(filename="", text=""):
     number of characters written.
     """
     with open(filename, "a", encoding="UTF-8") as new_file:
-        return new_file.append(text)
+        return new_file.write(text)
