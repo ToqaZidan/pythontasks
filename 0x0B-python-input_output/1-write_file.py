@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+""" Define a function that writes a string to a text file
+"""
+
+
 def write_file(filename="", text=""):
     """
     Function that truncate textfile if it was found, creat it if it
