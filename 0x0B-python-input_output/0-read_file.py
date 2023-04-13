@@ -8,5 +8,5 @@ def read_file(filename=""):
     are not maneged, and print a text file to stdout
     """
 
-    with open (filename, "r", encoding="UTF-8") as new_file:
+    with open(filename, "r", encoding="UTF-8") as new_file:
         print (new_file.read(), end="")
