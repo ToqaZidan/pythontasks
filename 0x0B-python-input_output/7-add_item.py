@@ -1,25 +1,33 @@
 #!/usr/bin/python3
 """
-Define a function that adds all arguments to a Python list
-and saves them to a JSON file.
+Function That add all arguments to a Python list and save them to a file.
 """
 
-
 import sys
+from typing import List
+from os import path
+import json
 
-from save_to_json_file import save_to_json_file
-from load_from_json_file import load_from_json_file
+
+def save_to_json_file(my_obj: List[str], filename: str) -> None:
+    """Save an object to a JSON file."""
+    with open(filename, mode='w', encoding='utf-8') as file:
+        json.dump(my_obj, file)
 
 
-    try:
-        items = load_from_json_file('add_item.json')
-    except FileNotFoundError:
+def load_from_json_file(filename: str) -> List[str]:
+    """Load an object from a JSON file."""
+    with open(filename, mode='r', encoding='utf-8') as file:
+        return json.load(file)
+
+
+if __name__ == "__main__":
+    filename = "add_item.json"
+
+    if path.isfile(filename):
+        items = load_from_json_file(filename)
+    else:
         items = []
-    items.extend(argv[1:])
-    save_to_json_file(items, 'add_item.json')
 
-
-if __name__ == '__main__':
-    add_item(sys.argv)
-    items = load_from_json_file('add_item.json')
-    print(items)
+    items.extend(sys.argv[1:])
+    save_to_json_file(items, filename)
