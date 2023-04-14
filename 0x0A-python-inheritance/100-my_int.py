@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Define a class MyInt which inherites fron Int """
 
 
