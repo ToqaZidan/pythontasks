@@ -7,12 +7,14 @@ after each line containing a specific string.
 
 def append_after(filename="", search_string="", new_string=""):
     """
-    Inserts a line of text to a file, after each line containing a specific string.
+    Inserts a line of text to a file after
+    each line containing specific string.
 
     Args:
         filename (str): The name of the file to modify.
         search_string (str): The string to search for in each line of the file.
-        new_string (str): The string to insert after each line containing the `search_string`.
+        new_string (str): The string to insert after each line containing
+        the `search_string`.
 
     Returns:
         None
@@ -20,11 +22,11 @@ def append_after(filename="", search_string="", new_string=""):
     Raises:
         None
     """
-    with open(filename, 'r+') as f:
-        lines = f.readlines()
-        f.seek(0)
+    with open(filename, 'r') as new_file:
+        lines = new_file.readlines()
+
+    with open(filename, 'w') as new_file:
         for line in lines:
-            f.write(line)
+            new_file.write(line)
             if search_string in line:
-                f.write(new_string + "\n")
-        f.truncate()
+                new_file.write(new_string + '\n')
