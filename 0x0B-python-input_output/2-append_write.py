@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Define a function that append a string to a text file
+"""
+Define a function that append a string to a text file
 """
 
 
