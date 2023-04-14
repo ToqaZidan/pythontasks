@@ -3,8 +3,9 @@
 
 
 class MyInt(int):
-    """A subclass of `int` that flips the behavior of the `==` and `!=` operators.
-    
+    """A subclass of `int` that flips
+    the behavior of the `==` and `!=` operators.
+
     Inherits from:
         int: The built-in integer class
     
