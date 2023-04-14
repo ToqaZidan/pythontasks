@@ -8,7 +8,7 @@ class MyInt(int):
 
     Inherits from:
         int: The built-in integer class
-    
+
     Example:
         x = MyInt(1)
         y = MyInt(2)

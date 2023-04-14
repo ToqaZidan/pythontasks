@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Define a function that adds a new attribute to an object"""
 
 
