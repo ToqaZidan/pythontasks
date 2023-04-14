@@ -22,14 +22,14 @@ def append_after(filename="", search_string="", new_string=""):
     Raises:
         None
     """
-    with open(filename, 'r+') as new_file:
+    with open(filename, 'r') as new_file:
         lines = new_file.readlines()
-        new_file.seek(0)
 
+    with open(filename, 'w') as new_file:
         for line in lines:
             new_file.write(line)
             if search_string in line:
-                for new_line in new_string.split('\n'):
-                    new_file.write(new_line + '\n')
+                new_file.write(new_string + '\n')
 
-        new_file.truncate()
+    with open(filename, 'a') as new_file:
+        new_file.write('\n')
